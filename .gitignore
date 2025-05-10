@@ -1,0 +1,12 @@
+# 项目排除路径
+/jeeplus-module/jeeplus-test/target/
+/jeeplus-platform/jeeplus-admin/target/
+/jeeplus-platform/jeeplus-common/target/
+/jeeplus-plugins/jeeplus-datascreen/target/
+/jeeplus-plugins/jeeplus-datasource/target/
+/jeeplus-plugins/jeeplus-file/target/
+/jeeplus-plugins/jeeplus-notify/target/
+/jeeplus-plugins/jeeplus-quartz/target/
+/jeeplus-plugins/jeeplus-tools/target/
+/jeeplus-plugins/jeeplus-ureport/target/
+/jeeplus-plugins/jeeplus-wps/target/

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jeeplus-platform/jeeplus-admin/jeeplus-admin.iml" filepath="$PROJECT_DIR$/jeeplus-platform/jeeplus-admin/jeeplus-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeeplus-platform/jeeplus-common/jeeplus-common.iml" filepath="$PROJECT_DIR$/jeeplus-platform/jeeplus-common/jeeplus-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeeplus-plugins/jeeplus-monitor/jeeplus-monitor.iml" filepath="$PROJECT_DIR$/jeeplus-plugins/jeeplus-monitor/jeeplus-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeeplus-plugins/jeeplus-quartz/jeeplus-quartz.iml" filepath="$PROJECT_DIR$/jeeplus-plugins/jeeplus-quartz/jeeplus-quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeeplus-module/jeeplus-test/jeeplus-test.iml" filepath="$PROJECT_DIR$/jeeplus-module/jeeplus-test/jeeplus-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeeplus-plugins/jeeplus-tools/jeeplus-tools.iml" filepath="$PROJECT_DIR$/jeeplus-plugins/jeeplus-tools/jeeplus-tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jeeplus-web/jeeplus-web.iml" filepath="$PROJECT_DIR$/jeeplus-web/jeeplus-web.iml" />
+    </modules>
+  </component>
+</project>
