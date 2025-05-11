@@ -48,6 +48,7 @@ spring:
         master:
           username: root
           password: root
+          # 使用远程数据库，需要自己配置
           url: jdbc:mysql://152.136.18.156:3306/dongqi?useUnicode=true&characterEncoding=utf-8&useSSL=false&nullCatalogMeansCurrent=true&serverTimezone=GMT%2B8&allowMultiQueries=true
           driver-class-name: com.mysql.cj.jdbc.Driver
 
