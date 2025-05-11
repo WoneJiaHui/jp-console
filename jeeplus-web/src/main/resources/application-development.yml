@@ -48,8 +48,7 @@ spring:
         master:
           username: root
           password: root
-          #url: jdbc:mysql://localhost:3306/jeeplus-vue-base?useUnicode=true&characterEncoding=utf-8&useSSL=false&nullCatalogMeansCurrent=true&serverTimezone=GMT%2B8
-          #url: jdbc:mysql://127.0.0.1:3306/jeeplus-vue-base?useUnicode=true&characterEncoding=utf-8&useSSL=false&nullCatalogMeansCurrent=true&serverTimezone=GMT%2B8
+          # 下面这个url是远程数据库，需要自己连接一下，最好使用navicat可视工具。
           url: jdbc:mysql://152.136.18.156:3306/dongqi?useUnicode=true&characterEncoding=utf-8&useSSL=false&nullCatalogMeansCurrent=true&serverTimezone=GMT%2B8&allowMultiQueries=true
           driver-class-name: com.mysql.cj.jdbc.Driver
 
