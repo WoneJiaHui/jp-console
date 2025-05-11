@@ -21,6 +21,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     private UserService userService;
 
     @Override
+
     public User loadUserByUsername(String username) throws UsernameNotFoundException {
         // 通过用户名从数据库获取用户信息
         UserDTO userInfo = userService.getUserByLoginName ( username );
