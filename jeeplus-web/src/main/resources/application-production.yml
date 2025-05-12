@@ -51,7 +51,9 @@ spring:
           username: root
           password: root
           # 使用远程数据库，需要自己配置
-          url: jdbc:mysql://152.136.18.156:3306/dongqi?useUnicode=true&characterEncoding=utf-8&useSSL=false&nullCatalogMeansCurrent=true&serverTimezone=GMT%2B8&allowMultiQueries=true
+          # 不知道为什么远程数据库为什么不能用了，想用的话还是先配置本地数据库吧
+          url: jdbc:mysql://localhost:3306/jeeplus-vue-base?useUnicode=true&characterEncoding=utf-8&useSSL=false&nullCatalogMeansCurrent=true&serverTimezone=GMT%2B8&allowMultiQueries=true
+          #url: jdbc:mysql://152.136.18.156:3306/dongqi?useUnicode=true&characterEncoding=utf-8&useSSL=false&nullCatalogMeansCurrent=true&serverTimezone=GMT%2B8&allowMultiQueries=true
           driver-class-name: com.mysql.cj.jdbc.Driver
 
           #oracle database settings
