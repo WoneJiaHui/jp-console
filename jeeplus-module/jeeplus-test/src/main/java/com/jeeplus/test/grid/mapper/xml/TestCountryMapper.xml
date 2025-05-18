@@ -7,6 +7,7 @@
 		a.name AS "name",
 		a.sum AS "sum",
 		a.continent_id AS "continent.id",
+
 		a.create_by AS "createBy.id",
 		a.create_date AS "createDate",
 		a.update_by AS "updateBy.id",

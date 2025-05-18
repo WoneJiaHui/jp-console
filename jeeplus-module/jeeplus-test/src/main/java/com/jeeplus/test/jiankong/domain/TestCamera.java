@@ -19,6 +19,12 @@ public class TestCamera extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
 
+
+    /**
+     * 摄像头ID
+     */
+    private String id;
+
     /**
      * 摄像头名称
      */

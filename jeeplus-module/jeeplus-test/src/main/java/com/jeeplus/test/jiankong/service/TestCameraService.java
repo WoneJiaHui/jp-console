@@ -10,6 +10,11 @@ import com.jeeplus.test.jiankong.service.dto.TestCameraDTO;
 import com.jeeplus.test.jiankong.domain.TestCamera;
 import com.jeeplus.test.jiankong.mapper.TestCameraMapper;
 
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfByte;
+import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.videoio.VideoCapture;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -38,7 +43,6 @@ public class TestCameraService extends ServiceImpl<TestCameraMapper, TestCamera>
      * @return
      */
     public IPage<TestCameraDTO> findPage(Page<TestCameraDTO> page, QueryWrapper queryWrapper) {
-        queryWrapper.eq("a.del_flag", 0); // 排除已经删除
         return baseMapper.findList(page, queryWrapper);
     }
 
@@ -49,8 +53,34 @@ public class TestCameraService extends ServiceImpl<TestCameraMapper, TestCamera>
      * @throws IOException
      */
     public byte[] getVideoStream(String cameraId) throws IOException {
-        // 这里需要实现获取视频流的逻辑，例如使用OpenCV
-        // 示例代码只是简单返回空字节数组，实际需要根据摄像头地址获取视频流
-        return new byte[0];
+        // 加载 OpenCV 库（如果还未加载）
+        System.loadLibrary(org.opencv.core.Core.NATIVE_LIBRARY_NAME);
+
+        // 创建 VideoCapture 对象，尝试打开摄像头
+        VideoCapture capture = new VideoCapture(cameraId);
+        if (!capture.isOpened()) {
+            System.err.println("无法打开摄像头: " + cameraId);
+            return new byte[0];
+        }
+
+        try {
+            // 创建一个 Mat 对象用于存储视频帧
+            Mat frame = new Mat();
+            // 读取一帧视频
+            if (capture.read(frame) && !frame.empty()) {
+                // 创建一个 MatOfByte 对象用于存储编码后的字节数组
+                MatOfByte buffer = new MatOfByte();
+                // 将视频帧编码为 JPEG 格式
+                Imgcodecs.imencode(".jpg", frame, buffer);
+                // 返回编码后的字节数组
+                return buffer.toArray();
+            } else {
+                System.err.println("无法读取摄像头帧");
+                return new byte[0];
+            }
+        } finally {
+            // 释放摄像头资源
+            capture.release();
+        }
     }
 }
